@@ -30,3 +30,21 @@ footer{
     width: 2.5rem;
     margin-left: 0.5rem;
 }
+
+
+th,
+td {
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+}
+
+thead{
+    background-color: rgb(209, 206, 206);
+    font-weight: bold;
+}
+
+tbody{
+    background-color: whitesmoke;
+}
+
