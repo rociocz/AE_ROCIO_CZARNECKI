@@ -50,20 +50,23 @@
         <div>
             <div class="row">
                 <div class="col-12 text-center p-3">
-                    <form class="d-inline text-center">
+                    <form class="d-flex flex-column gap-4" >
                         <label>
                             Name:
-                            <input type="text" id="fname" name="fname"><br>
-                        </label><br>
+                            <input type="text" style="width: 30%;" id="fname" name="fname">
+                        </label>
                         <label>
                             Email:
-                            <input type="text" id="fname" name="fname"><br>
-                        </label><br>
+                            <input type="text" style="width: 30%;"id="fname" name="fname">
+                        </label>
                         <label>
                             Message:
-                            <input type="text" id="fname" name="fname"><br>
-                        </label><br>
+                            <textarea class="input-text" style="width: 31%;"> </textarea>
+                        </label>
                     </form>
+                    <div class="d-flex flex-wrap justify-content-center m-3 ">
+                        <button class="btn btn-outline-success" type="submit" style="width: 10%;">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
