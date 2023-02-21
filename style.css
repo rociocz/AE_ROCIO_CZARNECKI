@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#navegacion {
+    border: 0.2rem solid black;
+    padding: 1%;
+    border-radius: 8%;
+    background-color: whitesmoke;
+}
+
+#subtitulo {
+    background-color: rgb(235, 233, 233);
+}
+
+#cards{
+    height: auto;
+    align-items: center;
+    margin: 2rem;
+}
+
+footer{
+    background-color: rgb(235, 233, 233);
+    align-items: end;
+}
+
+#redes img{
+    width: 2.5rem;
+    margin-left: 0.5rem;
+}
