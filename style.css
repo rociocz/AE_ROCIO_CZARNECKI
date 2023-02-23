@@ -4,25 +4,111 @@
     box-sizing: border-box;
 }
 
-#navegacion {
-    border: 0.2rem solid black;
-    padding: 1%;
-    border-radius: 8%;
-    background-color: whitesmoke;
+ :root{
+    --uno: #C90260;
+    --dos: #960248;
+    --tres: #2D3142;
+    --cuatro: #2d3142e4;
+    --cinco: #EBF5EE;
+    --seis: #D8BFAA;
+    --negro: #212121;
+    --siete: #8DA7BE;
+ }
+
+/**NAVEGACION - HEADER**/
+
+#naveg{
+    background-color: var(--tres);
+    text-transform: uppercase;
+    font-size: 12px;
+    
 }
+
+#navegacion {
+    border: 0.2rem solid var(--uno);
+    padding: 1%;
+    border-radius: 20px;
+    background-color: var(--uno);
+    color: var(--cinco);
+    font-weight: bold;
+    text-align: center;
+}
+
+#navegbot{
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    #navegbot{
+        display: flex;
+        justify-content: end;
+    }
+}
+
+#logo{
+    width: 10rem;
+}
+
+
+/**MAIN - SUBTITULO**/
+
+main {
+    background-color: whitesmoke;
+    
+}
+
+@media (min-width: 400px) {
+    main{
+        height: auto;
+    }
+    
+}
+
 
 #subtitulo {
-    background-color: rgb(235, 233, 233);
+    background-color: var(--cuatro);
+    color: var(--uno);
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    
 }
 
+@media (min-width: 500px) {
+    #subtitulo {
+        display: flex;
+        text-align: center;
+    }
+}
+
+#flechas{
+    width: 40px;
+}
+
+/**CATEGOrIAS - BUSCADOR**/
+
+
+
+#buscador, #lupa{
+    background-color: whitesmoke;
+    border: 1px solid #C90260;
+}
+
+buttom, img{
+    width: 20px;
+}
+
+
+/**CARDS**/
+
 #cards{
-    height: auto;
     align-items: center;
     margin: 2rem;
 }
 
 footer{
-    background-color: rgb(235, 233, 233);
+    background-color: var(--tres);
     align-items: end;
 }
 
@@ -31,6 +117,7 @@ footer{
     margin-left: 0.5rem;
 }
 
+/**TABLAS**/
 
 th,
 td {

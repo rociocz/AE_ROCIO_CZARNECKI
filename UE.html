@@ -10,15 +10,15 @@
 </head>
 <body>
     <header>
-        <nav class="row bg-secondary p-2">
-            <div class="d-flex flex-wrap aling-items-center">
-                <div class="col-sm-12 col-md-3 col-lg-3 text-center p-2">
-                    <img src="./Resources Amazing Events/Logo Amazing Events.png" alt="" style="width: 40%;">
+        <nav class="row p-2" id="naveg">
+            <div class="d-flex flex-wrap justify-content-center" >
+                <div class="col-sm-12 col-md-3 col-lg-3 p-2">
+                    <img src="./Resources Amazing Events/Logo Amazing Events.png" alt=""  id="logo">
                 </div>
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                    <div class="d-flex flex-wrap justify-content-end gap-3 p-2">
-                        <a class="nav-link active" aria-current="page" href="./index.html" id="navegacion">Home</a>
-                        <a class="nav-link" href="./UE.html" id="navegacion">Upcoming Events</a>
+                    <div class="d-flex flex-wrap gap-3 p-2" id="navegbot">
+                        <a class="nav-link" href="./index.html" id="navegacion">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./UE.html" id="navegacion">Upcoming Events</a>
                         <a class="nav-link" href="./PE.html" id="navegacion">Past Events</a>
                         <a class="nav-link" href="./Contact.html" id="navegacion">Contact</a>
                         <a class="nav-link" href="./Stats.html" id="navegacion">Stats</a>
@@ -28,11 +28,11 @@
         </nav>
     </header>
     <main>
-        <div class="row" id="subtitulo">
-            <div class="d-flex text-center p-3">
+        <div class="row" >
+            <div class="d-flex justify-content-evenly" id="subtitulo">
                 <div class="col-sm-2 col-md-2 col-lg-2">
-                    <div>
-                        <a href="#"><img src="./Resources Amazing Events/reverso.png" style="width: 20%; height:80%" alt=""></a>
+                    <div class="">
+                        <a href="./index.html"><img src="./Resources Amazing Events/reverso.png" alt="" id="flechas"></a>
                     </div>
                 </div>
                 <div class="col-sm-8 col-md-8 col-lg-8">
@@ -42,14 +42,14 @@
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2">
                     <div class="">
-                        <a href="#"><img src="./Resources Amazing Events/proximo.png" alt="" style="width: 20%; height:80%"></a>
+                        <a href="./PE.html"><img src="./Resources Amazing Events/proximo.png" alt="" id="flechas"></a>
                     </div>
                 </div>
             </div>
-        </div>
-            <div class="row p-3">
+        </div >
+            <div class="row p-3" >
                 <div class="d-flex flex-wrap col-sm-12 col-md-8 col-lg-8 ">
-                    <form class="d-flex gap-2 m-3 p-2 text-center">
+                    <form class="d-flex flex-wrap gap-2 m-3 p-2 justify-content-center">
                         <label for="">
                             <input type="checkbox" name="" id="">
                             Category
@@ -73,10 +73,12 @@
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="text-center">
-                        <form class="d-flex gap-3 m-3 p-2" role="search">
-                            <input class="form-control me-2 text-center" type="search" placeholder="Search" aria-label="Search ">
-                            <button class="btn btn-outline-success" type="submit" style="width: 10%;"><img src="./Resources Amazing Events/lupa.png" alt="" style="width: 100%;"></button>
+                    <div class="row">
+                        <form class="d-flex justify-content-center p-3" role="search" >
+                            <input class="form-control me-2 text-center" type="search" placeholder="Search" aria-label="Search " id="buscador" style="width: 60%;">
+                            <button class="btn btn-outline-success" id="lupa" type="submit" style="width: auto;">
+                                <img src="./Resources Amazing Events/lupa.png" alt="">
+                            </button>
                         </form>
                     </div>
                 </div>
