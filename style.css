@@ -6,7 +6,6 @@
 
  :root{
     --uno: #C90260;
-    --dos: #960248;
     --tres: #2D3142;
     --cuatro: #2d3142e4;
     --cinco: #EBF5EE;
@@ -119,21 +118,27 @@ footer{
 
 /**TABLAS**/
 
-th,
+
 td {
-    border: 2px solid black;
-    color: black;
+    border: 2px solid var(--uno);
+    color: var(--cinco);
     padding: 10px;
 }
 
+#contenido{
+    color: black !important;;
+}
+
 thead{
-    background-color: rgb(209, 206, 206);
+    background-color: var(--uno);
     font-weight: bold;
 }
 
 tbody{
     background-color: whitesmoke;
+    color: black;
 }
+
 
 .card-img-top, #sm{
     box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.53);
@@ -146,4 +151,42 @@ tbody{
     background-color: rgb(209, 206, 206);
     color: black;
     border-color: rgb(209, 206, 206);
+}
+
+
+/**CARDS - DETALLES**/
+
+
+#imgdetalle{
+    width: 30rem;
+    
+}
+
+#detalles{
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (min-width: 750px) {
+
+    #detalles{
+        display: flex;
+        flex-direction: row !important;
+        margin: 3rem;
+    }
+    #imgdetalle{
+        align-self: self-start;
+        width: 85rem;
+        height: 15rem;
+        
+    }
+    
+}
+
+
+.foot{
+    color: var(--uno);
+    font-weight: bold;
+    font-size: 2rem;
 }
