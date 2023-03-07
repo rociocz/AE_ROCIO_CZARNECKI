@@ -124,15 +124,7 @@ buttom, img{
     margin: 2rem;
 }*/
 
-footer{
-    background-color: var(--tres);
-    align-items: end;
-}
 
-#redes img{
-    width: 2.5rem;
-    margin-left: 0.5rem;
-}
 
 
 
@@ -205,13 +197,50 @@ tbody{
 }
 
 
+
+label {
+    color: var(--uno);
+    margin: 1px;
+}
+
+
+/**CONTACTO**/
+
+#botcontacto{    
+    border: 1px solid #C90260;
+    background-color: var(--uno);
+    color: var(--cinco);
+    text-transform: uppercase;
+}
+
+/**FOOTER**/
+#elementosfoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+}
+
 .foot{
     color: var(--uno);
     font-weight: bold;
     font-size: 2rem;
 }
 
-label {
-    color: var(--uno);
-    margin: 1px;
+footer{
+    background-color: var(--tres);
+}
+
+#redes img{
+    width: 1.3rem;
+    margin-left: 0.5rem;
+}
+
+@media (min-width: 360px) {
+    .foot{
+        text-align: right;
+    }
+    #redes img{
+        width: 2rem;
+    }
 }
