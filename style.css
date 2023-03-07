@@ -156,8 +156,17 @@ tbody{
 
 /**CARDS - DETALLES**/
 
+#cards-dinamicas>div {
+    margin: 25px;
+}
 
-#imgdetalle{
+#precybot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*#imgdetalle{
     width: 30rem;
     
 }
@@ -166,7 +175,7 @@ tbody{
     align-items: center;
     justify-content: center;
 
-}
+}*/
 
 @media (min-width: 750px) {
 
@@ -189,4 +198,9 @@ tbody{
     color: var(--uno);
     font-weight: bold;
     font-size: 2rem;
+}
+
+label {
+    color: var(--uno);
+    margin: 1px;
 }
