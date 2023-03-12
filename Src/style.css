@@ -1,10 +1,4 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
- :root{
+:root{
     --uno: #C90260;
     --tres: #2D3142;
     --cuatro: #2d3142e4;
@@ -12,7 +6,14 @@
     --seis: #D8BFAA;
     --negro: #212121;
     --siete: #8DA7BE;
- }
+}
+
+body{
+    width: 99.25%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 /**NAVEGACION - HEADER**/
 
