@@ -10,19 +10,6 @@ console.log(contenedorCheckBox);
 
 /**EVENTOS**/
 
-// input.addEventListener('input', () =>{
-//     console.log('escribir');
-//     let escritura = filtrarPorTexto(data.events, input.value)
-//     colocarTarjetas(escritura)
-// }) 
-
-
-// contenedorCheckBox.addEventListener('change', () =>{
-//     console.log('cambiar');
-//     let arrayFiltrado = filtrarConCheck(data.events)
-//     colocarTarjetas(arrayFiltrado)
-// })
-
 input.addEventListener('input', unirFunciones) 
 
 
