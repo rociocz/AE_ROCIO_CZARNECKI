@@ -52,6 +52,7 @@ function colocarTarjetas(array){
     }
     let cards = ''
     array.map(elemento => {
+        if (elemento.date <= data.currentDate){
         cards += `<div class="card" style="width: 18rem;">
         <img src="${elemento.image}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -63,7 +64,8 @@ function colocarTarjetas(array){
             </div>
         </div>
     </div>`
-    });
+    }
+});
     contenedorCards.innerHTML = cards
 }
 
