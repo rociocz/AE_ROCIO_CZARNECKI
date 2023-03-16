@@ -240,7 +240,7 @@ tbody{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card-body{
+.card-bodydt{
     padding: 1rem;
 }
 
@@ -268,9 +268,9 @@ tbody{
         font-size: 2rem;
     }
     #mndetail{
-        height: 90vh;
+        height: 82vh;
     }
-    .card-body{
+    .card-bodydt{
         padding: 3rem;
     }
     /* #details{

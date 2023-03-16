@@ -16,7 +16,7 @@ html +=
                 <img src="${detalles.image}" class="img-fluid img-detail" alt="..." >
             </div>
             <div class="col-md-12 col-lg-6">
-                <div class="card-body">
+                <div class="card-bodydt">
                     <h5 class="card-title" id="seccion1">${detalles.name}</h5>
                     <div id="seccion2">
                         <p><b>Place: </b>${detalles.place}</p>
