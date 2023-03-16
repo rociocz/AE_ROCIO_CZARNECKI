@@ -110,6 +110,9 @@ buttom, img{
 
 #titulotarjeta{
     color: var(--uno);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
 }
 
 #descripciontarjeta{
