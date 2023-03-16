@@ -48,7 +48,7 @@ function colocarTarjetas(array){
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <div id="precybot">
                 <p>${"Price $" + elemento.price}</p>
-                <a href="#" class="btn btn-primary">Details</a>
+                <a href="../Detail.html?id=${elemento.id}" class="btn btn-primary">Details</a>
             </div>
         </div>
     </div>`

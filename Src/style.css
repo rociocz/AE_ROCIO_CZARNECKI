@@ -137,6 +137,10 @@ buttom, img{
 
 /**TABLAS**/
 
+#mnstats{
+    height: 100vh;
+}
+
 
 td {
     border: 2px solid var(--uno);
@@ -176,32 +180,93 @@ tbody{
 /**CARDS - DETALLES**/
 
 
-#imgdetalle{
-    width: 30rem;
-    
+#mndetail{
+    height: auto;
 }
 
-#detalles{
-    align-items: center;
+#cards-detail{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
+    align-items: center;
+    margin: 3rem;
 }
 
-@media (min-width: 750px) {
 
-    #detalles{
+#details-contenedor{
+    width: 20rem;
+}
+
+/* #cajadetail{
+    margin: 3rem;
+    width: 20rem;
+} */
+
+.img-detail{
+    width: auto;
+    height: auto;
+}
+
+
+
+#seccion1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--uno);
+}
+
+/* #seccion1, #seccion2, #seccion3, #seccion4{
+    /* color: var(--uno); */
+
+ #seccion3{
+    /* text-transform: uppercase; */
+    padding: 3% 0%;
+ }
+
+#seccion2, #seccion4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-body{
+    padding: 1rem;
+}
+
+
+
+@media (min-width: 760px ) {
+    #cards-detail{
         display: flex;
-        flex-direction: row !important;
-        margin: 3rem;
-    }
-    #imgdetalle{
-        align-self: self-start;
-        width: 85rem;
-        height: 15rem;
         
     }
-    
+    #details-contenedor{
+        width: 30rem;
+    }
 }
+
+
+@media (min-width: 990px) {
+    #cards-detail{
+        padding: 2rem;
+    }
+    #details-contenedor{
+        width: 70rem;
+    }
+    #seccion1{
+        font-size: 2rem;
+    }
+    #mndetail{
+        height: 90vh;
+    }
+    .card-body{
+        padding: 3rem;
+    }
+    /* #details{
+        width: 80rem;
+    } */
+}
+
 
 
 
@@ -212,6 +277,10 @@ label {
 
 
 /**CONTACTO**/
+
+#mncontact{
+    height: 80vh;
+}
 
 #botcontacto{    
     border: 1px solid #C90260;
