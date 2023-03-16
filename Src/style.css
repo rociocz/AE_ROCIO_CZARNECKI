@@ -108,6 +108,14 @@ buttom, img{
 
 /**CARDS**/
 
+#titulotarjeta{
+    color: var(--uno);
+}
+
+#descripciontarjeta{
+    padding: 5% 0%;
+}
+
 #cards-dinamicas>div {
     margin: 25px;
 }
@@ -177,7 +185,7 @@ tbody{
 }
 
 
-/**CARDS - DETALLES**/
+/**DETALLES**/
 
 
 #mndetail{
