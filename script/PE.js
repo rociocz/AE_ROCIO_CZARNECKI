@@ -6,53 +6,68 @@ console.log(input);
 
 const contenedorCheckBox = document.getElementById('check-box')
 console.log(contenedorCheckBox);
+
+
+
+let urlEvents = fetch('https://mindhub-xj03.onrender.com/api/amazing')
+.then((response) => response.json())
+.then((elementos) => {
+    let arrayElementos = elementos.events.filter(elements => (elements.date <= elementos.currentDate))
+    
+    
+    
+    /**EVENTOS**/
+
+    input.addEventListener('input', ()=> unirFunciones(arrayElementos, input.value))
+
+    
+    contenedorCheckBox.addEventListener('change', () =>{
+    console.log('cambiar');
+    let arrayFiltrado = filtrarConCheck(arrayElementos)
+    colocarTarjetas(arrayFiltrado)
+})
+
+
+    colocarTarjetas (arrayElementos)
+    crearCheckboxes(arrayElementos)
     
 
-/**EVENTOS**/
+console.log(urlEvents);
 
-input.addEventListener('input', unirFunciones) 
-
-
-contenedorCheckBox.addEventListener('change', unirFunciones)
-
-/**LLAMADAS**/ 
-
-colocarTarjetas (data.events)
+})
 
 
-crearCheckboxes(data.events)
-
+// if (elemento.date <= data.currentDate)
 
 /**FUNCIONES**/ 
 
-function unirFunciones (){
-    let primerFun = filtrarPorTexto(data.events, input.value)
+function unirFunciones (array){
+
+    let primerFun = filtrarPorTexto(array, input.value)
     let segundoFun = filtrarConCheck(primerFun)
     colocarTarjetas(segundoFun)
 }
+ 
 
-
-function colocarTarjetas(array){
+function colocarTarjetas(array) {
     if (array.length == 0){
         contenedorCards.innerHTML = '<h2 class="resultado">No hay elementos coincidentes</h2>'
         return
     }
     let cards = ''
     array.map(elemento => {
-        if (elemento.date <= data.currentDate){
-        cards += `<div class="card" style="width: 18rem;">
+            cards += `<div class="card" style="width: 18rem;">
         <img src="${elemento.image}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title" id="titulotarjeta">${elemento.name}</h5>
             <p class="card-text" id="descripciontarjeta">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <div id="precybot">
                 <p>${"Price: $" + elemento.price}</p>
-                <a href="../Detail.html?id=${elemento.id}" class="btn btn-primary">Details</a>
+                <a href="../Detail.html?id=${elemento._id}" class="btn btn-primary">Details</a>
             </div>
         </div>
     </div>`
-    }
-});
+    });
     contenedorCards.innerHTML = cards
 }
 
@@ -121,3 +136,26 @@ function filtrarConCheck(array){
 
 
 
+
+// let urlEvents = fetch('https://mindhub-xj03.onrender.com/api/amazing')
+// .then((response) => response.json())
+// .then((elementos) => {
+//     let arrayElementos = elementos.events.filter(events => (events.date <= elementos.currentDate))
+    
+//     /**EVENTOS**/
+
+//     input.addEventListener('input', ()=> unirFunciones(arrayElementos, input.value))
+    
+//     contenedorCheckBox.addEventListener('change', () =>{
+//         console.log('cambiar');
+//         let arrayFiltrado = filtrarConCheck(arrayElementos)
+//         colocarTarjetas(arrayElementos)
+//     })
+    
+//     colocarTarjetas (arrayElementos)
+//     crearCheckboxes(arrayElementos)
+    
+
+// console.log(urlEvents);
+
+// })
