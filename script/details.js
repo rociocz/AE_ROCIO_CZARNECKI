@@ -3,12 +3,17 @@ let params = new URLSearchParams(queryString)
 let id = params.get("id")
 
 
-let detalles = data.events.find(elemento => elemento.id == id)
+
 
 const contenedor = document.getElementById('cards-detail')
 
-
-let html = ""
+let urlEvents = fetch('https://mindhub-xj03.onrender.com/api/amazing')
+.then((response) => response.json())
+.then((elementos) => {
+  let arrayElementos = elementos.events
+  let detalles = arrayElementos.find(elemento => elemento._id == id) 
+    
+   let html = ""
 html += 
     `<div class="card mb-3" id="details-contenedor">
         <div class="row g-0" id="detailsjs">
@@ -34,6 +39,77 @@ html +=
     </div>`
 
 contenedor.innerHTML = html
+
+console.log(urlEvents);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const queryString = location.search
+// let params = new URLSearchParams(queryString)
+// let id = params.get("id")
+
+
+// let detalles = data.events.find(elemento => elemento.id == id)
+
+// const contenedor = document.getElementById('cards-detail')
+
+
+// let html = ""
+// html += 
+//     `<div class="card mb-3" id="details-contenedor">
+//         <div class="row g-0" id="detailsjs">
+//             <div class="col-md-12 col-lg-6">
+//                 <img src="${detalles.image}" class="img-fluid img-detail" alt="..." >
+//             </div>
+//             <div class="col-md-12 col-lg-6">
+//                 <div class="card-bodydt">
+//                     <h5 class="card-title" id="seccion1">${detalles.name}</h5>
+//                     <div id="seccion2">
+//                         <p><b>Place: </b>${detalles.place}</p>
+//                         <p><b>Date: </b>${detalles.date}</p>
+//                     </div>
+//                     <p class="card-text" id="seccion3"><b>Description:</b><br>${detalles.description}</p>
+//                     <div id="seccion4">
+//                         <p><b>Capacity: </b>${detalles.capacity} people.</p>
+//                         <p><b>Price: </b>$${detalles.price}</p>
+//                     </div>
+//                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>`
+
+// contenedor.innerHTML = html
 
 
 
