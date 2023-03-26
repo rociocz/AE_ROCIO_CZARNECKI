@@ -15,8 +15,6 @@ let urlEvents = fetch('https://mindhub-xj03.onrender.com/api/amazing')
 .then((elementos) => {
     let arrayElementos = elementos.events
     
-    
-    /**EVENTOS**/
 
     input.addEventListener('input', ()=> unirFunciones(arrayElementos, input.value))
 

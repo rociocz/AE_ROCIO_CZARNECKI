@@ -148,18 +148,37 @@ buttom, img{
 
 /**TABLAS**/
 
+
 #mnstats{
-    height: 100vh;
+    height: auto;
 }
 
-
-td {
+tr, td, th{
     border: 2px solid var(--uno);
-    color: var(--cinco);
+    text-align: center;
+
     padding: 10px;
 }
 
-#contenido{
+#clasificacion {
+    color: var(--uno) ;
+    text-transform: uppercase ;
+    font-size: 1rem;
+    font-weight: bold ;
+}
+
+th{
+    color: var(--cinco);
+    background-color: var(--uno);
+    font-size: 1.2rem;
+}
+
+#table1, #table2, #table3{
+    font-size: 1.3rem;
+}
+
+
+/* #contenidotitulo, #contenido{
     color: black !important;;
 }
 
@@ -171,7 +190,7 @@ thead{
 tbody{
     background-color: whitesmoke;
     color: black;
-}
+} */
 
 
 .card-img-top, #sm{
