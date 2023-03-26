@@ -58,7 +58,7 @@ function colocarTarjetas(array) {
         <img src="${elemento.image}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title" id="titulotarjeta">${elemento.name}</h5>
-            <p class="card-text" id="descripciontarjeta">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text" id="descripciontarjeta">${elemento.description}</p>
             <div id="precybot">
                 <p>${"Price: $" + elemento.price}</p>
                 <a href="../Detail.html?id=${elemento._id}" class="btn btn-primary">Details</a>

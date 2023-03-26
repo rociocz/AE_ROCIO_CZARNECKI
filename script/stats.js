@@ -1,16 +1,8 @@
+let contenedorTabla1 = document.getElementById("table1")
 
-// let contenedorTabla = document.getElementById('tabla')
-// console.log(contenedorTabla);
+const contenedorTabla2 = document.getElementById("table2")
 
-
-// let contenedorTabla2 = document.getElementById("table2")
-// console.log(contenedorTabla2);
-
-// let contenedorTabla3 = document.getElementById("table3")
-// console.log(contenedorTabla3);
-
-// let contenedorIngresos = document.getElementById("ingresos")
-
+const contenedorTabla3 = document.getElementById("table3")
 
 
 
@@ -51,9 +43,6 @@ function Categorias(array) {
     return setCategory
 }
 
-
-
-let contenedorTabla1 = document.getElementById("table1")
 
 
 function largestCapacityEvent(array) {
@@ -102,25 +91,24 @@ function lowestAttendance(array) {
 
 
 function Tabla1(array) {
-    let htmlInner = ""
+    let tablauno = ""
     let arrayPrueba = []
     arrayPrueba.push(largestCapacityEvent(array))
     arrayPrueba.push(highestAttendance(array))
     arrayPrueba.push(lowestAttendance(array))
-    htmlInner +=
-    `<td class="col-lg-3">`+arrayPrueba[1].name+` (`+ ((arrayPrueba[1].assistance / arrayPrueba[1].capacity * 100).toFixed(2)) +`%)</td>` +
-    `<td class="col-lg-3">`+arrayPrueba[2].name+` (`+ ((arrayPrueba[2].assistance / arrayPrueba[2].capacity * 100).toFixed(2)) +`%)</td>` +
-    `<td class="col-lg-3">`+arrayPrueba[0].name+` (`+ arrayPrueba[0].capacity +`)</td>`
-    contenedorTabla1.innerHTML = htmlInner
+    tablauno +=
+    `<td>`+arrayPrueba[1].name+` (`+ ((arrayPrueba[1].assistance / arrayPrueba[1].capacity * 100).toFixed(2)) +`%)</td>` +
+    `<td>`+arrayPrueba[2].name+` (`+ ((arrayPrueba[2].assistance / arrayPrueba[2].capacity * 100).toFixed(2)) +`%)</td>` +
+    `<td>`+arrayPrueba[0].name+` (`+ arrayPrueba[0].capacity +`)</td>`
+    contenedorTabla1.innerHTML = tablauno
 }
 
 
 
-const contenedorTabla2 = document.getElementById("table2")
 
 
 function Tabla2(arrayCategorias, arrayObj){
-    let internoHTML = ""
+    let tablados = ""
     arrayCategorias.forEach(elemento => {
         let numeroIncome = 0
         let numeroPorcentageAssistance = 0
@@ -131,17 +119,16 @@ function Tabla2(arrayCategorias, arrayObj){
             numeroPorcentageAssistance += elemento.estimate
             numeroPorcentageCapacity += elemento.capacity
         })
-        internoHTML +=`<tr><td class="col-lg-3">`+elemento+`</td><td class="col-lg-3">$ `+numeroIncome+`</td><td class="col-lg-3">`+((numeroPorcentageAssistance / numeroPorcentageCapacity * 100).toFixed(2))+` %</td></tr>`
+        tablados +=`<tr><td>`+elemento+`</td><td>$ `+numeroIncome+`</td><td>`+((numeroPorcentageAssistance / numeroPorcentageCapacity * 100).toFixed(2))+` %</td></tr>`
     })
-    contenedorTabla2.innerHTML = internoHTML
+    contenedorTabla2.innerHTML = tablados
 }
 
 
-const contenedorTabla3 = document.getElementById("table3")
 
 
 function Tabla3(arrayCategorias, arrayObj){
-    let internoHTML = ""
+    let tablatres = ""
     arrayCategorias.forEach(elemento => {
         let numeroIncome = 0
         let numeroPorcentageAssistance = 0
@@ -152,8 +139,8 @@ function Tabla3(arrayCategorias, arrayObj){
             numeroPorcentageAssistance += elemento.assistance
             numeroPorcentageCapacity += elemento.capacity
         })
-        internoHTML +=`<tr><td class="col-lg-3">`+elemento+`</td><td class="col-lg-3">$ `+numeroIncome+`</td><td class="col-lg-3">`+((numeroPorcentageAssistance / numeroPorcentageCapacity * 100).toFixed(2))+` %</td></tr>`
+        tablatres +=`<tr><td>`+elemento+`</td><td>$ `+numeroIncome+`</td><td>`+((numeroPorcentageAssistance / numeroPorcentageCapacity * 100).toFixed(2))+` %</td></tr>`
     })
-    contenedorTabla3.innerHTML = internoHTML
+    contenedorTabla3.innerHTML = tablatres
 }
 
